@@ -98,7 +98,7 @@ function showResult(prediction) {
       currentIndex++;
       renderQuestion();
     } else {
-      fetch("http://localhost:8000/predict", {
+      fetch("https://depresso-z4g4.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

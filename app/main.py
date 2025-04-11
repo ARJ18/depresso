@@ -1,5 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 import numpy as np
 import joblib
@@ -11,7 +14,7 @@ with open("data/mappings.json", "r") as f:
 app = FastAPI()
 
 origins = [
-'*' 
+'https://depresso-z4g4.onrender.com' 
 ]
 
 app.add_middleware(
@@ -21,6 +24,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+app.mount("/data", StaticFiles(directory="data"), name="data")
+
+templates = Jinja2Templates(directory="templates")
 
 class UserInput(BaseModel):
     age: int
@@ -76,3 +85,7 @@ def predict(data: UserInput):
     result = get_prediction(confidence)
 
     return {"prediction": result}
+
+@app.get("/", response_class=HTMLResponse)
+def home(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
