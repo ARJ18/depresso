@@ -92,8 +92,6 @@ function showResult(prediction) {
   
     answers[currentQuestion.name] = value;
   
-    console.log("Answers to send:", answers);
-  
     if (currentIndex < questions.length - 1) {
       currentIndex++;
       renderQuestion();
