@@ -9,8 +9,8 @@ async function loadQuestions() {
 }
 function handleEnter(event) {
   if (event.key === "Enter") {
-    event.preventDefault(); // Stop Enter from submitting the form
-    nextQuestion();         // Optionally go to next question
+    event.preventDefault(); 
+    nextQuestion();         
   }
 }
 
@@ -84,7 +84,7 @@ function showResult(prediction) {
     if (currentQuestion.type === "number") {
       value = currentQuestion.float ? parseFloat(value) : parseInt(value);
     } else if (currentQuestion.type === "dropdown") {
-      // Convert to number if it's a numeric value
+
       if (!isNaN(value) && value.trim() !== "") {
         value = value.includes('.') ? parseFloat(value) : parseInt(value);
       }
