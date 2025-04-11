@@ -11,8 +11,7 @@ with open("data/mappings.json", "r") as f:
 app = FastAPI()
 
 origins = [
-    "http://127.0.0.1:5500",  # Live Server or browser local preview
-    "http://localhost:5500",  # Just in case
+'*' 
 ]
 
 app.add_middleware(
