@@ -1,0 +1,89 @@
+[
+  {
+    "label": "What is your age?",
+    "name": "age",
+    "type": "number",
+    "min": 0,
+    "max": 150
+  },
+  {
+    "label": "What is your gender?",
+    "name": "gender",
+    "type": "dropdown",
+    "options": ["Male", "Female"]
+  },
+  {
+    "label": "What is your CGPA?",
+    "name": "cgpa",
+    "type": "number",
+    "min": 0,
+    "max": 10
+  },
+  {
+    "label": "How satisfied are you with your work? (1 = Not satisfied, 5 = Very satisfied)",
+    "name": "work_satisfaction",
+    "type": "dropdown",
+    "options": [
+      { "label": "1 - Not satisfied", "value": 1 },
+      { "label": "2", "value": 2 },
+      { "label": "3", "value": 3 },
+      { "label": "4", "value": 4 },
+      { "label": "5 - Very satisfied", "value": 5 }
+    ]
+  },
+  {
+    "label": "How much pressure do you feel at work? (1 = No pressure, 5 = Extremely pressured)",
+    "name": "work_pressure",
+    "type": "dropdown",
+    "options": [
+      { "label": "1 - No pressure", "value": 1 },
+      { "label": "2", "value": 2 },
+      { "label": "3", "value": 3 },
+      { "label": "4", "value": 4 },
+      { "label": "5 - Extremely pressured", "value": 5 }
+    ]
+  },
+  {
+    "label": "How many hours do you work in a day?",
+    "name": "work_hours",
+    "type": "number",
+    "min": 0,
+    "max": 24
+  },
+  {
+    "label": "How would you rate your financial stress? (1 = No stress, 5 = Very high stress)",
+    "name": "financial_stress",
+    "type": "dropdown",
+    "options": [
+      { "label": "1 - No stress", "value": 1 },
+      { "label": "2", "value": 2 },
+      { "label": "3", "value": 3 },
+      { "label": "4", "value": 4 },
+      { "label": "5 - Very high stress", "value": 5 }
+    ]
+  },
+  {
+    "label": "How would you describe your diet?",
+    "name": "diet",
+    "type": "dropdown",
+    "options": ["Healthy", "Moderate", "Unhealthy"]
+  },
+  {
+    "label": "Do you have suicidal thoughts?",
+    "name": "suicidal_thoughts",
+    "type": "dropdown",
+    "options": ["Yes", "No"]
+  },
+  {
+    "label": "How many hours do you sleep?",
+    "name": "sleep",
+    "type": "dropdown",
+    "options": ["<5", "5-6", "7-8", ">8"]
+  },
+  {
+    "label": "Do you have a family history of mental illness?",
+    "name": "mental_illness_family",
+    "type": "dropdown",
+    "options": ["Yes", "No"]
+  }
+]

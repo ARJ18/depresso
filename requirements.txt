@@ -1,0 +1,10 @@
+dagster
+dagster-webserver
+pandas
+scikit-learn
+joblib
+fastapi
+uvicorn
+pydantic
+joblib
+json

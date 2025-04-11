@@ -1,0 +1,31 @@
+{
+  "gender": {
+    "Female": 0,
+    "Male": 1
+  },
+  "diet": {
+    "Healthy": 0,
+    "Moderate": 1,
+    "Unhealthy": 2
+  },
+  "suicidal_thoughts": {
+    "No": 0,
+    "Yes": 1
+  },
+  "mental_illness_family": {
+    "No": 0,
+    "Yes": 1
+  },
+  "depression": {
+    "No": 0,
+    "Yes": 1
+  },
+  "sleep": {
+    "5-6": [1, 0, 0, 0],
+    "7-8": [0, 1, 0, 0],
+    "<5":  [0, 0, 1, 0],
+    ">8":  [0, 0, 0, 1]
+  }
+}
+
+
